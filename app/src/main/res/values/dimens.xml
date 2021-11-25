@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="padding_1">1dp</dimen>
+    <dimen name="padding_2">2dp</dimen>
+    <dimen name="padding_3">3dp</dimen>
+    <dimen name="padding_5">5dp</dimen>
+    <dimen name="padding_6">6dp</dimen>
+    <dimen name="padding_7">7dp</dimen>
+    <dimen name="padding_8">8dp</dimen>
+    <dimen name="padding_10">10dp</dimen>
+    <dimen name="padding_11">11dp</dimen>
+    <dimen name="padding_12">12dp</dimen>
+    <dimen name="padding_14">14dp</dimen>
+    <dimen name="padding_15">15dp</dimen>
+    <dimen name="padding_20">20dp</dimen>
+    <dimen name="padding_25">25dp</dimen>
+    <dimen name="padding_30">30dp</dimen>
+    <dimen name="padding_40">40dp</dimen>
+    <dimen name="padding_50">50dp</dimen>
+    <dimen name="padding_60">60dp</dimen>
+    <dimen name="padding_70">70dp</dimen>
+    <dimen name="sound_text_size">24sp</dimen>
+
+    <dimen name="take_pic_n">58dp</dimen>
+    <dimen name="take_pic_p">63dp</dimen>
+
+    <dimen name="title_height">55dp</dimen>
+    <dimen name="title_button_width">44dp</dimen>
+    <dimen name="title_button_width_r">22dp</dimen>
+    <dimen name="level_len">220dp</dimen>
+
+    <dimen name="time_pick_text_size">18sp</dimen>
+    <dimen name="date_picker_line_width">1dp</dimen>
+    <dimen name="list_item_radius">6dp</dimen>
+    <dimen name="sound_test_radius">2dp</dimen>
+    <dimen name="setting_text_padding">17dp</dimen>
+    <dimen name="setting_text_title_size">15sp</dimen>
+    <dimen name="version_icon_height">120dp</dimen>
+    <dimen name="date_title">20sp</dimen>
+    <dimen name="date_popup_btn_size">19sp</dimen>
+    <dimen name="date_result">17sp</dimen>
+
+    <dimen name="dialog_padding">20dp</dimen>
+    <dimen name="dialog_title_marginTop">10dp</dimen>
+    <dimen name="dialog_message_marginTop">20dp</dimen>
+    <dimen name="dialog_title_textSize">60px</dimen>
+    <dimen name="dialog_message_textSize">40px</dimen>
+    <dimen name="dialog_button_textSize">50px</dimen>
+</resources>

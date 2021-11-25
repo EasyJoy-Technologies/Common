@@ -1,0 +1,47 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion "28.0.3"
+
+
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 28
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+    }
+
+    viewBinding {
+        enabled = true
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation files('libs/GDTSDK.unionNormal.4.422.1292.aar')//腾讯
+    implementation 'com.pangle.cn:ads-sdk-pro:4.0.1.9'
+    implementation "com.gromore.cn:pangle-adapter:4.0.1.9.1" //穿山甲 adapter
+    implementation "com.gromore.cn:gdt-adapter:4.422.1292.0"  //gdt adapter
+    implementation "com.gromore.cn:gromore-sdk:3.1.0.1"
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.0.0'
+    implementation  'com.umeng.umsdk:common:9.3.8'// 必选
+    implementation  'com.umeng.umsdk:asms:1.2.2'// 必选
+    configurations.all {
+        resolutionStrategy {
+            force 'androidx.core:core:1.6.0'
+        }
+    }
+}
+repositories {
+    mavenCentral()
+}

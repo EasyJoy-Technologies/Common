@@ -1,0 +1,45 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/ad_dailog_bg">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+        <View
+            android:layout_width="30dp"
+            android:layout_height="2dp"
+            android:layout_gravity="center"
+            android:background="@color/ad_text_color"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:textSize="16sp"
+            android:textColor="@color/ad_text_color"
+            android:text="更多优秀产品"
+            android:textStyle="bold"/>
+        <View
+            android:layout_width="30dp"
+            android:layout_height="2dp"
+            android:layout_gravity="center"
+            android:background="@color/ad_text_color"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+    </androidx.recyclerview.widget.RecyclerView>
+
+</LinearLayout>

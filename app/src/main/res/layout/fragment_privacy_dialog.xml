@@ -1,0 +1,193 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/ad_dailog_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/padding_15"
+            android:paddingRight="@dimen/padding_15">
+
+            <TextView
+                android:id="@+id/title_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_10"
+                android:layout_gravity="center"
+                android:textColor="@color/ad_main_text_color"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_10"
+                android:text="为了给您提供更好的使用体验，我们可能会向您申请如下权限："
+                android:textColor="@color/ad_main_text_color"
+                android:textSize="12sp" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:layout_marginTop="@dimen/padding_5">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/padding_8"
+                        android:text="录音权限"
+                        android:textColor="@color/ad_main_text_color"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/padding_6"
+                        android:text="录音功能或其他使用语音输入或者语音控制的功能，需要获得录音权限以获取语音。"
+                        android:textColor="@color/ad_main_text_color_1"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/padding_8"
+                        android:text="相机权限"
+                        android:textColor="@color/ad_main_text_color"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/padding_6"
+                        android:text="部分功能需要使用相机的图像或视频，需要获得相机权限。"
+                        android:textColor="@color/ad_main_text_color_1"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/padding_8"
+                        android:text="读/写存储空间"
+                        android:textColor="@color/ad_main_text_color"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/padding_6"
+                        android:text="应用需要使用存储空间来存储和读取应用运行所必需的数据。"
+                        android:textColor="@color/ad_main_text_color_1"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/padding_8"
+                        android:text="锁屏显示"
+                        android:textColor="@color/ad_main_text_color"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/padding_6"
+                        android:text="部分产品功能如闹钟、计算器等需要在锁屏界面之上弹出内容。"
+                        android:textColor="@color/ad_main_text_color_1"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/padding_8"
+                        android:text="电话和设备标识"
+                        android:textColor="@color/ad_main_text_color"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/padding_6"
+                        android:text="为了标识您的个人数据以及向您提供更加精准的服务和广告，我们可能需要获取部分设备标识信息，包括无线网SSID名称、WiFi路由器MAC地址、设备的MAC地址、IP地址、设备地理位置、设备标识符（如IMEI、AndroidID、OAID、IMSI、ICCID、GAID、MEID），根据需要，可能在前台或者后台获取。"
+                        android:textColor="@color/ad_main_text_color_1"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/padding_8"
+                        android:text="地理位置"
+                        android:textColor="@color/ad_main_text_color"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="部分功能会为用户保存位置信息，或者用于提供更加精准的服务和广告，需要获取用户地理位置信息。"
+                        android:textColor="@color/ad_main_text_color_1"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </ScrollView>
+
+            <TextView
+                android:id="@+id/message_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/ad_main_text_color_2"
+                android:textSize="10sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp">
+        <TextView
+            android:id="@+id/cancel_button"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="30dp"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:textColor="@color/ad_main_text_color_3"
+            android:text="拒绝"
+            android:background="@drawable/ad_click_button_bg_2"/>
+        <TextView
+            android:id="@+id/confirm_button"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="15dp"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textColor="@color/ad_white"
+            android:text="同意"
+            android:background="@drawable/ad_click_button_bg_1"/>
+    </LinearLayout>
+</LinearLayout>

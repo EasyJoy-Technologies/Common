@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="dialog_recommend_adapter_item_color">#cccccc</color>
+    <color name="ad_text_color">#333333</color>
+    <color name="ad_text_light_color">#333333</color>
+    <color name="ad_text_dark_color">#999999</color>
+    <color name="ad_text_dark_color_2">#666666</color>
+    <color name="ad_text_dark_color_1">#cccccc</color>
+    <color name="ad_white">#ffffff</color>
+    <color name="ad_button_color">#0079fe</color>
+    <color name="ad_button_press_color">#0066fe</color>
+    <color name="ad_button_color_1">#f0f0f0</color>
+    <color name="ad_button_pressed_color_1">#cccccc</color>
+    <color name="ad_main_text_color">#333333</color>
+    <color name="ad_main_text_color_1">#666666</color>
+    <color name="ad_main_text_color_2">#999999</color>
+    <color name="ad_main_text_color_3">#cccccc</color>
+</resources>

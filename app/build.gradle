@@ -1,5 +1,6 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
+group ='com.github.EasyJoy-Technologies'
 
 android {
     compileSdkVersion 28

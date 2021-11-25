@@ -1,4 +1,4 @@
-apply plugin: 'com.android.library'
+apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 
 android {
@@ -9,6 +9,9 @@ android {
     defaultConfig {
         minSdkVersion 19
         targetSdkVersion 28
+        versionCode 1
+        versionName "1.0.1"
+        multiDexEnabled true
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
     }
 

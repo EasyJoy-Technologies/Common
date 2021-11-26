@@ -36,7 +36,7 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation files('libs/GDTSDK.unionNormal.4.422.1292.aar')//腾讯
+    implementation 'com.qq.e.union:union:4.422.1292'//腾讯
     implementation 'com.pangle.cn:ads-sdk-pro:4.0.1.9'
     implementation "com.gromore.cn:pangle-adapter:4.0.1.9.1" //穿山甲 adapter
     implementation "com.gromore.cn:gdt-adapter:4.422.1292.0"  //gdt adapter

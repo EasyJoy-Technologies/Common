@@ -123,7 +123,7 @@ class AdManager {
         return null
     }
 
-    fun showGMInterstitialAd(activity: Activity, adContainer: ViewGroup, groMoreId: String, adListener: AdListener): GMInterstitialAd?{
+    fun showGMInterstitialAd(activity: Activity, groMoreId: String, adListener: AdListener): GMInterstitialAd?{
         if (showAdForAuditing()) {
             val gmInterstitialAd = GMInterstitialAd()
             gmInterstitialAd.showInteractionAd(activity, groMoreId, adListener)

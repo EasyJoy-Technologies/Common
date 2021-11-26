@@ -10,6 +10,7 @@
     <color name="ad_button_color">#0079fe</color>
     <color name="ad_button_press_color">#0066fe</color>
     <color name="ad_button_color_1">#f0f0f0</color>
+    <color name="ad_button_color_2">#66cccccc</color>
     <color name="ad_button_pressed_color_1">#cccccc</color>
     <color name="ad_main_text_color">#333333</color>
     <color name="ad_main_text_color_1">#666666</color>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ad_dialog_bg"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/padding_20"
+        android:gravity="center"
+        android:lineSpacingExtra="@dimen/padding_5"
+        android:text="给我个好评吧！"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:textColor="@color/ad_main_text_color"/>
+
+    <TextView
+        android:id="@+id/exit_dialog_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/padding_10"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="@dimen/padding_10"
+        android:lineSpacingExtra="@dimen/padding_5"
+        android:text="亲爱的用户，您好，用得怎么样？给我个好评吧？"
+        android:textSize="16dp"
+        android:textColor="@color/ad_text_dark_color_2"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_30"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/cancel_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginRight="@dimen/padding_20"
+                android:layout_marginLeft="@dimen/padding_40"
+                android:paddingTop="@dimen/padding_5"
+                android:paddingBottom="@dimen/padding_5"
+                android:text="取消"
+                android:textColor="@color/ad_main_text_color_3"
+                android:textSize="17dp"
+                android:background="@drawable/ad_click_button_bg_2"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/confirm_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:paddingTop="@dimen/padding_5"
+                android:paddingBottom="@dimen/padding_5"
+                android:layout_marginLeft="@dimen/padding_20"
+                android:layout_marginRight="@dimen/padding_40"
+                android:text="去好评"
+                android:textSize="17dp"
+                android:textColor="@color/ad_white"
+                android:background="@drawable/ad_click_button_bg_1"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

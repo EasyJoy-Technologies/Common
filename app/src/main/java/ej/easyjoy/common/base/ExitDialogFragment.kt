@@ -56,15 +56,15 @@ class ExitDialogFragment : DialogFragment() {
             })
         }
         if(leftButtonRes!=null){
-            binding.exitDialogOk.setBackgroundResource(leftButtonRes!!)
+            binding.confirmButton.setBackgroundResource(leftButtonRes!!)
         }
         if(rightButtonRes!=null){
-            binding.exitDialogCancel.setBackgroundResource(rightButtonRes!!)
+            binding.cancelButton.setBackgroundResource(rightButtonRes!!)
         }
-        binding.exitDialogOk.setOnClickListener{
+        binding.confirmButton.setOnClickListener{
             requireActivity().finish()
         }
-        binding.exitDialogCancel.setOnClickListener {
+        binding.cancelButton.setOnClickListener {
             dismiss()
         }
     }

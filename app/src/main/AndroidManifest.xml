@@ -1,2 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="ej.easyjoy.common"/>
+          package="ej.easyjoy.common">
+    <application>
+        <activity android:name=".amusement.AmusementActivity"/>
+    </application>
+</manifest>

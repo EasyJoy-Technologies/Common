@@ -1,7 +1,5 @@
 package ej.easyfone.adcommon.newAd
 
-import android.app.DialogFragment
-import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
@@ -15,6 +13,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.Window
+import androidx.fragment.app.DialogFragment
 import ej.easyfone.adcommon.R
 import ej.easyfone.adcommon.databinding.FragmentPrivacyDialogBinding
 
@@ -89,7 +88,7 @@ class PrivacyDialogFragment : DialogFragment() {
         val window: Window? = dialog!!.window
         window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         var layoutParams = window!!.attributes
-        var manager = activity.windowManager
+        var manager = requireActivity().windowManager
         var outMetrics = DisplayMetrics()
         manager.defaultDisplay.getMetrics(outMetrics)
         var width = outMetrics.widthPixels

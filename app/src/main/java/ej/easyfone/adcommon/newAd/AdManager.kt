@@ -105,12 +105,40 @@ class AdManager {
         gmSplashAd.showSplashAd(activity,adContainer,groMoreId,defaultAppId,defaultId,adListener)
     }
 
-    fun showTTSplashAd(activity: Activity, adContainer: ViewGroup,ttId: String,adListener: AdListener){
-
+    fun showGMBannerAd(activity: Activity, adContainer: ViewGroup, groMoreId: String, adListener: AdListener): GMBannerAd?{
+        if (showAdForAuditing()) {
+            val gmBannerAd = GMBannerAd()
+            gmBannerAd.showBannerAd(activity, adContainer, groMoreId, adListener)
+            return gmBannerAd
+        }
+        return null
     }
 
-    fun showQQSplashAd(activity: Activity, adContainer: ViewGroup,qqId: String,adListener: AdListener){
+    fun showGMNativeAd(activity: Activity, adContainer: ViewGroup, groMoreId: String, adListener: AdListener): GMNativeAd?{
+        if (showAdForAuditing()) {
+            val gmNativeAd = GMNativeAd()
+            gmNativeAd.showNativeAd(activity, adContainer, groMoreId, adListener)
+            return gmNativeAd
+        }
+        return null
+    }
 
+    fun showGMInterstitialAd(activity: Activity, adContainer: ViewGroup, groMoreId: String, adListener: AdListener): GMInterstitialAd?{
+        if (showAdForAuditing()) {
+            val gmInterstitialAd = GMInterstitialAd()
+            gmInterstitialAd.showInteractionAd(activity, groMoreId, adListener)
+            return gmInterstitialAd
+        }
+        return null
+    }
+
+    fun showGMFullVideoAd(activity: Activity, groMoreId: String,adListener: AdListener): GMFullVideoAd? {
+        if (showAdForAuditing()) {
+            val fullVideoAd = GMFullVideoAd()
+            fullVideoAd.showFullVideoAd(activity,groMoreId,adListener)
+            return fullVideoAd
+        }
+        return null
     }
 
     fun showInterstitialAd(activity: Activity, qqId: String, ttId: String, groMoreId: String, adListener: AdListener): InterstitialAd? {
@@ -138,16 +166,6 @@ class AdManager {
         }
         return null
     }
-
-    fun showGMBannerAd(activity: Activity, adContainer: ViewGroup, groMoreId: String, adListener: AdListener): GMBannerAd?{
-        if (showAdForAuditing()) {
-            val gmBannerAd = GMBannerAd()
-            gmBannerAd.showBannerAd(activity, adContainer, groMoreId, adListener)
-            return gmBannerAd
-        }
-        return null
-    }
-
 
 
     fun showTTNativeAd(activity: Activity?, adContainer: ViewGroup?, ttId: String?, adListener: AdListener?): NativeAD? {

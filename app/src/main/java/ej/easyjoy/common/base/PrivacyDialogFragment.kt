@@ -35,7 +35,7 @@ class PrivacyDialogFragment : DialogFragment() {
         appName = title
     }
 
-    fun setOnConfirmListener(onConfirmListener: OnConfirmListener, leftRes: Int, rightRes: Int){
+    fun setOnConfirmListener(onConfirmListener: OnConfirmListener, leftRes: Int?, rightRes: Int?){
         this.onConfirmListener = onConfirmListener
         leftButtonRes = leftRes
         rightButtonRes = rightRes

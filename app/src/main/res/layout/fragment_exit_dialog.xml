@@ -15,10 +15,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="15dp"
             android:text="退出应用"
             android:textColor="@color/ad_main_text_color"
-            android:textSize="20dp"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
         <LinearLayout
@@ -32,17 +32,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="是否要退出应用？"
+                android:text="您确定要退出应用吗？"
                 android:textColor="@color/ad_text_dark_color"
-                android:textSize="16dp" />
+                android:textSize="17sp" />
         </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/ad_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="@dimen/padding_5"
-                android:layout_marginTop="@dimen/padding_20"
                 android:layout_gravity="center"
                 android:orientation="vertical"></LinearLayout>
 
@@ -50,7 +48,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/padding_10"
-            android:layout_marginBottom="@dimen/padding_30"
+            android:layout_marginBottom="@dimen/padding_20"
             android:orientation="horizontal">
 
             <LinearLayout

@@ -9,7 +9,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="@dimen/padding_20"
+        android:layout_marginTop="@dimen/padding_10"
         android:gravity="center"
         android:lineSpacingExtra="@dimen/padding_5"
         android:text="给我个好评吧！"
@@ -34,7 +34,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/padding_30"
-        android:layout_marginBottom="@dimen/padding_20"
+        android:layout_marginBottom="@dimen/padding_10"
         android:orientation="horizontal">
 
         <LinearLayout

@@ -5,17 +5,30 @@
     android:background="@drawable/ad_dialog_bg"
     android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="@dimen/padding_10"
-        android:gravity="center"
-        android:lineSpacingExtra="@dimen/padding_5"
-        android:text="给我个好评吧！"
-        android:textSize="18dp"
-        android:textStyle="bold"
-        android:textColor="@color/ad_main_text_color"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/close_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="@dimen/padding_5"
+            android:padding="@dimen/padding_10"
+            android:src="@mipmap/float_cal_close_image"
+            android:background="@drawable/ad_click_button_oval"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/padding_10"
+            android:gravity="center"
+            android:lineSpacingExtra="@dimen/padding_5"
+            android:text="给我个好评吧！"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:textColor="@color/ad_main_text_color"/>
+    </FrameLayout>
 
     <TextView
         android:id="@+id/exit_dialog_text"
@@ -26,7 +39,7 @@
         android:layout_marginTop="25dp"
         android:layout_marginRight="@dimen/padding_10"
         android:lineSpacingExtra="@dimen/padding_5"
-        android:text="亲爱的用户，您好，用得怎么样？给我个好评吧？"
+        android:text="用得怎么样？喜欢就给我五星好评吧！问题和建议请您直接向我们反馈哦。"
         android:textSize="16dp"
         android:textColor="@color/ad_text_dark_color_2"/>
 
@@ -53,7 +66,7 @@
                 android:layout_marginLeft="@dimen/padding_10"
                 android:paddingTop="@dimen/padding_5"
                 android:paddingBottom="@dimen/padding_5"
-                android:text="取消"
+                android:text="问题建议"
                 android:textColor="@color/ad_main_text_color_3"
                 android:textSize="17dp"
                 android:background="@drawable/ad_click_button_bg_2"/>

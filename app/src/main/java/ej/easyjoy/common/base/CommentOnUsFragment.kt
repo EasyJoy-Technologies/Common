@@ -23,10 +23,15 @@ class CommentOnUsFragment: DialogFragment(){
     lateinit var binding: FragmentCommentOnUsLayoutBinding
     private var leftButtonRes: Int? = null
     private var rightButtonRes: Int? = null
+    private var onItemClickListener: OnItemClickListener? = null
 
     fun setButtonRes(leftRes: Int, rightRes: Int){
         leftButtonRes = leftRes
         rightButtonRes = rightRes
+    }
+
+    fun setOnItemClickListener(onItemClickListener: OnItemClickListener){
+        this.onItemClickListener = onItemClickListener
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
@@ -50,6 +55,11 @@ class CommentOnUsFragment: DialogFragment(){
                 goToMarket(requireContext())
             }
             cancelButton.setOnClickListener {
+                if(onItemClickListener!=null)
+                    onItemClickListener!!.onClick()
+                dismiss()
+            }
+            closeButton.setOnClickListener {
                 dismiss()
             }
         }
@@ -95,5 +105,9 @@ class CommentOnUsFragment: DialogFragment(){
         var height = outMetrics.heightPixels
         layoutParams.width = width * 7 / 8
         window!!.attributes = layoutParams
+    }
+
+    interface OnItemClickListener{
+        fun onClick()
     }
 }

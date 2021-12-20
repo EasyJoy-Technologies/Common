@@ -20,7 +20,7 @@ object EJConstants {
         const val GM_BANNER_ID = "947040845"
         const val GM_INTERSTITIAL_ID = "947040847"
         const val GM_NATIVE_AD_ID = "947040844"
-        const val GM_VIDEO_AD_ID = "947040844"
+        const val GM_VIDEO_AD_ID = "947040846"
 
         const val UM_ID = "5b9883ad8f4a9d54da00005b"
         const val UM_CHANNEL = "cn"

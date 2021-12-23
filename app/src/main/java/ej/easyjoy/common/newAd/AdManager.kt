@@ -114,10 +114,10 @@ class AdManager {
         return null
     }
 
-    fun showGMNativeAd(activity: Activity, adContainer: ViewGroup, groMoreId: String, adListener: AdListener): GMNativeAd?{
+    fun showGMNativeAd(context: Context, adContainer: ViewGroup, groMoreId: String, adListener: AdListener): GMNativeAd?{
         if (showAdForAuditing()) {
             val gmNativeAd = GMNativeAd()
-            gmNativeAd.showNativeAd(activity, adContainer, groMoreId, adListener)
+            gmNativeAd.showNativeAd(context, adContainer, groMoreId, adListener)
             return gmNativeAd
         }
         return null

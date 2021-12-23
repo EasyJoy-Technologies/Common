@@ -17,10 +17,10 @@ class GMNativeAd {
 
     private var groMoreAd: GMNativeAd? = null
 
-    fun showNativeAd(activity: Context, adContainer: ViewGroup, groMoreId: String, adListener: AdListener){
+    fun showNativeAd(context: Context, adContainer: ViewGroup, groMoreId: String, adListener: AdListener){
         releaseAd()
-        var mTTAdNative = GMUnifiedNativeAd(activity, groMoreId)
-        val gdtNativeAdLogoParams = FrameLayout.LayoutParams(UIUtils.dp2px(activity, 40f), UIUtils.dp2px(activity, 13f), Gravity.RIGHT or Gravity.TOP) // 例如，放在右上角
+        var mTTAdNative = GMUnifiedNativeAd(context, groMoreId)
+        val gdtNativeAdLogoParams = FrameLayout.LayoutParams(UIUtils.dp2px(context, 40f), UIUtils.dp2px(context, 13f), Gravity.RIGHT or Gravity.TOP) // 例如，放在右上角
         val adSlot = GMAdSlotNative.Builder()
             .setAdStyleType(com.bytedance.msdk.api.AdSlot.TYPE_EXPRESS_AD) // **必传，表示请求的模板广告还是原生广告，AdSlot.TYPE_EXPRESS_AD：模板广告 ； AdSlot.TYPE_NATIVE_AD：原生广告**
             .setImageAdSize(640, 340) //注：必填字段，单位dp 详情见上面备注解释

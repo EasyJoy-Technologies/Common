@@ -41,7 +41,7 @@ class AdManager {
     fun showAdForAuditing(context: Context): Boolean {
         val sp = context.getSharedPreferences("data", Context.MODE_MULTI_PROCESS)
         if(sp.getLong("first_ad_time",0L)==0L){
-            sp.edit().putLong("first_ad_time",System.currentTimeMillis())
+            sp.edit().putLong("first_ad_time",System.currentTimeMillis()).commit()
         }
         if(System.currentTimeMillis()-sp.getLong("first_ad_time",0L)>(24*60*60*1000)){
             return true

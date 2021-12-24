@@ -73,7 +73,7 @@ class FullVideoAd {
 
     private fun showTTVideoAd(){
         val adManager = AdManager.instance
-        if (!adManager.showAdForAuditing()) {
+        if (!adManager.showAdForAuditing(activity!!)) {
             return
         }
         //step4:创建广告请求参数AdSlot,具体参数含义参考文档

@@ -1,2 +1,0 @@
-configurations.maybeCreate("default")
-artifacts.add("default",file("kssdk-ad-3.3.17.aar"))

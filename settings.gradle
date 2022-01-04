@@ -1,2 +1,2 @@
-include ':app'
+include ':app', ':adLibs'
 rootProject.name = "Common"

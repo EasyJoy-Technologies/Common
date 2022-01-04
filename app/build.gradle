@@ -44,7 +44,7 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'androidx.fragment:fragment-ktx:1.2.4'// 必选
     implementation 'com.qq.e.union:union:4.422.1292'//腾讯
-    implementation (name: "kssdk-ad-3.3.17", ext: 'aar')//快手
+    implementation project(path: ':adLibs')//快手
     implementation 'com.pangle.cn:ads-sdk-pro:4.0.1.9'
     implementation "com.gromore.cn:pangle-adapter:4.0.1.9.1" //穿山甲 adapter
     implementation "com.gromore.cn:gdt-adapter:4.422.1292.0"  //gdt adapter

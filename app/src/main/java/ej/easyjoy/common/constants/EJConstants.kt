@@ -22,8 +22,8 @@ object EJConstants {
         const val GM_NATIVE_AD_ID = "947040844"
         const val GM_VIDEO_AD_ID = "947040846"
 
-        const val UM_ID = "5b9883ad8f4a9d54da00005b"
-        const val UM_CHANNEL = "cn"
+        const val UM_ID = "5b8fb94f8f4a9d1265000357"
+        const val UM_CHANNEL = "Umeng"
     }
 
     object MIRROR{

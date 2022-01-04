@@ -25,4 +25,24 @@ object EJConstants {
         const val UM_ID = "5b9883ad8f4a9d54da00005b"
         const val UM_CHANNEL = "cn"
     }
+
+    object MIRROR{
+        const val GM_APP_ID = "5020323"
+        const val TT_APP_ID = "5020323"
+        const val QQ_APP_ID = "1106951804"
+        const val KS_APP_ID = "595000002"
+        const val GM_SPLASH_ID = "887577812"
+        const val QQ_SPLASH_ID = "887614667"
+        const val GM_BANNER_ID = "946791433"
+        const val GM_INTERSTITIAL_ID = "946791434"
+        const val GM_NATIVE_AD_ID = "947508468"
+        const val TT_NATIVE_AD_ID = "945583639"
+        const val KS_NATIVE_AD_ID = "5950000071"
+        const val QQ_NATIVE_AD_ID = "4082989044409840"
+        const val KS_CONTENT_AD_ID = "5950000064"
+        const val GM_VIDEO_AD_ID = "946791435"
+
+        const val UM_ID = "5b152528f29d984cee000109"
+        const val UM_CHANNEL = "cn"
+    }
 }

@@ -185,7 +185,7 @@ class NativeAD {
         val gdtNativeAdLogoParams = FrameLayout.LayoutParams(UIUtils.dp2px(activity, 40f), UIUtils.dp2px(activity, 13f), Gravity.RIGHT or Gravity.TOP) // 例如，放在右上角
         val adSlot = GMAdSlotNative.Builder()
                 .setAdStyleType(com.bytedance.msdk.api.AdSlot.TYPE_EXPRESS_AD) // **必传，表示请求的模板广告还是原生广告，AdSlot.TYPE_EXPRESS_AD：模板广告 ； AdSlot.TYPE_NATIVE_AD：原生广告**
-                .setImageAdSize(640, 340) //注：必填字段，单位dp 详情见上面备注解释
+                .setImageAdSize(ViewUtils.getMaxWidth(activity), 0) //注：必填字段，单位dp 详情见上面备注解释
                 .setAdCount(3) //请求广告数量为1到3条。
                 .setDownloadType(GMAdConstant.DOWNLOAD_TYPE_POPUP) //下载合规设置
                 .build()

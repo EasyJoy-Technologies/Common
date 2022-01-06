@@ -43,12 +43,12 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'androidx.fragment:fragment-ktx:1.2.4'// 必选
-    implementation 'com.qq.e.union:union:4.422.1292'//腾讯
-    implementation 'com.pangle.cn:ads-sdk-pro:4.0.1.9'
-    implementation "com.gromore.cn:pangle-adapter:4.0.1.9.1" //穿山甲 adapter
-    implementation "com.gromore.cn:gdt-adapter:4.422.1292.0"  //gdt adapter
-    implementation "com.gromore.cn:ks-adapter:3.3.17.1"  //ks adapter
-    implementation "com.gromore.cn:gromore-sdk:3.1.0.1"
+    implementation 'com.qq.e.union:union:4.431.1301'//腾讯
+    implementation 'com.pangle.cn:ads-sdk-pro:4.2.0.2'
+    implementation "com.gromore.cn:pangle-adapter:4.2.0.2.0" //穿山甲 adapter
+    implementation "com.gromore.cn:gdt-adapter:4.431.1301.1"  //gdt adapter
+    implementation "com.gromore.cn:ks-adapter:3.3.19.1"  //ks adapter
+    implementation "com.gromore.cn:gromore-sdk:3.2.1.0"  //groMore sdk
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
     implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.0.0'
     implementation  'com.umeng.umsdk:common:9.3.8'// 必选

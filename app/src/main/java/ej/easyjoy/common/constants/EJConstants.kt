@@ -37,7 +37,7 @@ object EJConstants {
         const val GM_INTERSTITIAL_ID = "946791434"
         const val GM_NATIVE_AD_ID = "947508468"
         const val TT_NATIVE_AD_ID = "945583639"
-        const val KS_NATIVE_AD_ID = "5950000071"
+        const val KS_NATIVE_AD_ID = 5950000071
         const val QQ_NATIVE_AD_ID = "4082989044409840"
         const val KS_CONTENT_AD_ID = "5950000064"
         const val GM_VIDEO_AD_ID = "946791435"

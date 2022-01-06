@@ -16,11 +16,13 @@ object ProductUtils {
         products.add(Product(R.mipmap.product_easy_noise_icon,"噪音检测仪","为您检测环境噪音值","ej.easyjoy.noisechecker.cn"))
         products.add(Product(R.mipmap.product_easy_tools_icon,"工具大全","单位换算各种查询常用工具大全","ej.easyjoy.toolsbox.cn"))
         products.add(Product(R.mipmap.product_easy_text_icon,"易记事","纯文本记事工具","ej.easyjoy.easynote.text.cn"))
+        var temp: Product? = null
         for(product in products){
             if(product.packageName == packName){
-                products.remove(product)
+                temp = product
             }
         }
+        if(temp!=null) products.remove(temp)
         return products
     }
 }

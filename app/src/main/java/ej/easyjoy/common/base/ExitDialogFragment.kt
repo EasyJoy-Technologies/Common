@@ -80,7 +80,6 @@ class ExitDialogFragment : DialogFragment() {
         var width = outMetrics.widthPixels
         var height = outMetrics.heightPixels
         layoutParams.width = width*7/8
-        layoutParams.height = height * 9 / 10
         window!!.attributes = layoutParams
     }
 }

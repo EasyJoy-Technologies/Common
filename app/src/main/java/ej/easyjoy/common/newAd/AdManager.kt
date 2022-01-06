@@ -176,6 +176,21 @@ class AdManager {
         return null
     }
 
+    fun showGMNativeAd(
+        context: Context,
+        adContainer: ViewGroup,
+        groMoreId: String,
+        adListener: AdListener,
+        width: Int
+    ): GMNativeAd? {
+        if (showAdForAuditing(context)) {
+            val gmNativeAd = GMNativeAd()
+            gmNativeAd.showNativeAd(context, adContainer, groMoreId, adListener,width)
+            return gmNativeAd
+        }
+        return null
+    }
+
     fun showGMInterstitialAd(
         activity: Activity,
         groMoreId: String,

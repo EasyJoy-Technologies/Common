@@ -16,6 +16,7 @@ import androidx.fragment.app.DialogFragment
 import ej.easyjoy.common.databinding.FragmentExitDialogBinding
 import ej.easyjoy.common.newAd.AdListener
 import ej.easyjoy.common.newAd.AdManager
+import ej.easyjoy.common.newAd.ViewUtils
 
 
 class ExitDialogFragment : DialogFragment() {
@@ -53,7 +54,7 @@ class ExitDialogFragment : DialogFragment() {
                 override fun adClose() {}
                 override fun adError(error: String) {}
                 override fun adShow() {}
-            })
+            },ViewUtils.getMaxWidth(requireContext())*7/8)
         }
         if(leftButtonRes!=null){
             binding.confirmButton.setBackgroundResource(leftButtonRes!!)

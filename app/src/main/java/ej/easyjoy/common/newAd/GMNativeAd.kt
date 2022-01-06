@@ -23,7 +23,37 @@ class GMNativeAd {
         val gdtNativeAdLogoParams = FrameLayout.LayoutParams(UIUtils.dp2px(context, 40f), UIUtils.dp2px(context, 13f), Gravity.RIGHT or Gravity.TOP) // 例如，放在右上角
         val adSlot = GMAdSlotNative.Builder()
             .setAdStyleType(com.bytedance.msdk.api.AdSlot.TYPE_EXPRESS_AD) // **必传，表示请求的模板广告还是原生广告，AdSlot.TYPE_EXPRESS_AD：模板广告 ； AdSlot.TYPE_NATIVE_AD：原生广告**
-            .setImageAdSize(640, 340) //注：必填字段，单位dp 详情见上面备注解释
+            .setImageAdSize(ViewUtils.getMaxWidth(context), 0) //注：必填字段，单位dp 详情见上面备注解释
+            .setAdCount(3) //请求广告数量为1到3条。
+            .setDownloadType(GMAdConstant.DOWNLOAD_TYPE_POPUP) //下载合规设置
+            .build()
+        //step3:请求广告，调用feed广告异步请求接口，加载到广告后，拿到广告素材自定义渲染
+        mTTAdNative.loadAd(adSlot, object : GMNativeAdLoadCallback {
+            override fun onAdLoaded(ads: List<GMNativeAd>) {
+                Log.e("huajie", "GroMore native ad onAdLoaded")
+                if (ads == null || ads.isEmpty()) {
+                    return
+                }
+                groMoreAd = ads[0]
+                if(groMoreAd!=null) {
+                    bindGroMoreListener(groMoreAd!!, adContainer, adListener)
+                    groMoreAd!!.render()
+                }
+            }
+            override fun onAdLoadedFail(adError: com.bytedance.msdk.api.AdError) {
+                Log.e("huajie", "GroMore native ad error="+adError.message)
+                adListener.adError(adError.message)
+            }
+        })
+    }
+
+    fun showNativeAd(context: Context, adContainer: ViewGroup, groMoreId: String, adListener: AdListener,width: Int){
+        releaseAd()
+        var mTTAdNative = GMUnifiedNativeAd(context, groMoreId)
+        val gdtNativeAdLogoParams = FrameLayout.LayoutParams(UIUtils.dp2px(context, 40f), UIUtils.dp2px(context, 13f), Gravity.RIGHT or Gravity.TOP) // 例如，放在右上角
+        val adSlot = GMAdSlotNative.Builder()
+            .setAdStyleType(com.bytedance.msdk.api.AdSlot.TYPE_EXPRESS_AD) // **必传，表示请求的模板广告还是原生广告，AdSlot.TYPE_EXPRESS_AD：模板广告 ； AdSlot.TYPE_NATIVE_AD：原生广告**
+            .setImageAdSize(width, 0) //注：必填字段，单位dp 详情见上面备注解释
             .setAdCount(3) //请求广告数量为1到3条。
             .setDownloadType(GMAdConstant.DOWNLOAD_TYPE_POPUP) //下载合规设置
             .build()

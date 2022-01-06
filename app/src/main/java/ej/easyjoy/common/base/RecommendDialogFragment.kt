@@ -40,7 +40,7 @@ class RecommendDialogFragment : DialogFragment() {
             recommendDialogAdapter.setButtonRes(buttonRes)
             recyclerView.adapter = recommendDialogAdapter
             recyclerView.layoutManager = LinearLayoutManager(activity)
-            recommendDialogAdapter.submit(ProductUtils.getOurProduct())
+            recommendDialogAdapter.submit(ProductUtils.getOurProduct(requireContext().packageName))
         }
     }
 

@@ -2,6 +2,7 @@ package ej.easyjoy.common.newAd
 
 import android.app.Activity
 import android.util.Log
+import com.bytedance.msdk.api.reward.RewardItem
 import com.bytedance.msdk.api.v2.GMAdConstant
 import com.bytedance.msdk.api.v2.ad.fullvideo.GMFullVideoAd
 import com.bytedance.msdk.api.v2.ad.fullvideo.GMFullVideoAdListener
@@ -52,6 +53,8 @@ class GMFullVideoAd {
         override fun onVideoError() {
         }
         override fun onSkippedVideo() {
+        }
+        override fun onRewardVerify(p0: RewardItem) {
         }
     }
 

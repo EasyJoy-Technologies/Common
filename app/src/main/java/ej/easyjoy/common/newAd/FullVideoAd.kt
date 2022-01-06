@@ -3,6 +3,7 @@ package ej.easyjoy.common.newAd
 import android.app.Activity
 import android.util.Log
 import android.widget.Toast
+import com.bytedance.msdk.api.reward.RewardItem
 import com.bytedance.msdk.api.v2.GMAdConstant
 import com.bytedance.msdk.api.v2.ad.fullvideo.GMFullVideoAd
 import com.bytedance.msdk.api.v2.ad.fullvideo.GMFullVideoAdListener
@@ -144,7 +145,6 @@ class FullVideoAd {
             Log.e("666666","onFullVideoAdShow")
         }
         override fun onFullVideoAdShowFail(p0: com.bytedance.msdk.api.AdError) {
-            TODO("Not yet implemented")
         }
         override fun onFullVideoAdClick() {
         }
@@ -155,6 +155,8 @@ class FullVideoAd {
         override fun onVideoError() {
         }
         override fun onSkippedVideo() {
+        }
+        override fun onRewardVerify(p0: RewardItem) {
         }
     }
 

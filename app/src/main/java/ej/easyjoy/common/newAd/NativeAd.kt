@@ -22,7 +22,7 @@ import com.qq.e.comm.constants.AdPatternType
 import com.qq.e.comm.util.AdError
 
 
-class NativeAD {
+class NativeAd {
     private var nativeExpressADView: NativeExpressADView? = null
     private var mTTAd: TTNativeExpressAd? = null
     private var groMoreAd: GMNativeAd? = null

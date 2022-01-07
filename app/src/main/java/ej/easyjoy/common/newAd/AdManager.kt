@@ -2,7 +2,6 @@ package ej.easyjoy.common.newAd
 
 import android.app.Activity
 import android.content.Context
-import android.content.SharedPreferences
 import android.view.ViewGroup
 import com.bytedance.msdk.api.v2.*
 import com.bytedance.sdk.openadsdk.TTAdConfig
@@ -11,7 +10,6 @@ import com.bytedance.sdk.openadsdk.TTAdSdk
 import com.qq.e.comm.managers.GDTAdSdk
 import ej.easyjoy.common.R
 import java.text.SimpleDateFormat
-import java.util.*
 
 
 class AdManager {
@@ -34,7 +32,7 @@ class AdManager {
 
     private val interstitialAd: InterstitialAd? = null
     private val bannerAd: BannerAd? = null
-    private val nativeAd: NativeAD? = null
+    private val nativeAd: NativeAd? = null
 
     private val simpleDateFormat = SimpleDateFormat("yyyy-MM-dd")
 
@@ -240,9 +238,9 @@ class AdManager {
         ksId: Long,
         groMoreId: String,
         adListener: AdListener?
-    ): NativeAD? {
+    ): NativeAd? {
         if (showAdForAuditing(activity!!)) {
-            val nativeAd = NativeAD()
+            val nativeAd = NativeAd()
             nativeAd.showNativeAd(activity!!, adContainer!!, groMoreId, adListener!!)
             return nativeAd
         }
@@ -271,9 +269,9 @@ class AdManager {
         adContainer: ViewGroup?,
         ttId: String?,
         adListener: AdListener?
-    ): NativeAD? {
+    ): NativeAd? {
         if (showAdForAuditing(activity!!)) {
-            val nativeAd = NativeAD()
+            val nativeAd = NativeAd()
             nativeAd.showTTNativeAd(activity, adContainer, ttId, adListener)
             return nativeAd
         }
@@ -285,9 +283,9 @@ class AdManager {
         adContainer: ViewGroup?,
         ttId: String?,
         adListener: AdListener?
-    ): NativeAD? {
+    ): NativeAd? {
         if (showAdForAuditing(activity!!)) {
-            val nativeAd = NativeAD()
+            val nativeAd = NativeAd()
             nativeAd.showQQNativeAd(activity, adContainer, ttId, adListener)
             return nativeAd
         }
@@ -300,9 +298,9 @@ class AdManager {
         adContainer: ViewGroup,
         groMoreId: String,
         adListener: AdListener
-    ): NativeAD? {
+    ): NativeAd? {
         if (showAdForAuditing(activity)) {
-            val nativeAd = NativeAD()
+            val nativeAd = NativeAd()
             nativeAd.showGroMoreNativeAd(activity, adContainer, groMoreId, adListener)
             return nativeAd
         }

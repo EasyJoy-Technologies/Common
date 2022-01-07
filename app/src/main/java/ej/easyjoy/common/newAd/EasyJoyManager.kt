@@ -1,6 +1,7 @@
 package ej.easyjoy.common.newAd
 
 import android.content.Context
+import com.umeng.analytics.MobclickAgent
 import com.umeng.commonsdk.UMConfigure
 
 class EasyJoyManager {
@@ -21,11 +22,12 @@ class EasyJoyManager {
             }
     }
 
-    fun preInitUmSdk(context: Context, umId: String){
-        UMConfigure.preInit(context, umId, "Umeng")
+    fun preInitUmSdk(context: Context, umId: String, umChannel: String){
+        UMConfigure.preInit(context, umId, umChannel)
     }
 
-    fun initUMSDK(context: Context, umId: String){
-        UMConfigure.init(context, umId, "Umeng", UMConfigure.DEVICE_TYPE_PHONE, null)
+    fun initUMSDK(context: Context, umId: String, umChannel: String){
+        UMConfigure.init(context, umId, umChannel, UMConfigure.DEVICE_TYPE_PHONE, null)
+        MobclickAgent.setPageCollectionMode(MobclickAgent.PageMode.AUTO)
     }
 }

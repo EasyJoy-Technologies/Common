@@ -13,9 +13,11 @@ import com.bytedance.sdk.openadsdk.TTAdConstant
 
 class GMSplashAd {
 
-    fun showSplashAd(activity: Activity, adContainer: ViewGroup, gromoreId: String,defaultAppId: String, defaultId: String,adListener: AdListener): GMSplashAd {
-        var mTTSplashAd = GMSplashAd(activity, gromoreId)
-        mTTSplashAd.setAdSplashListener(getGMSplashListener(adListener))
+    private var mTTSplashAd: GMSplashAd? = null
+
+    fun showSplashAd(activity: Activity, adContainer: ViewGroup, gromoreId: String,defaultAppId: String, defaultId: String,adListener: AdListener) {
+        mTTSplashAd = GMSplashAd(activity, gromoreId)
+        mTTSplashAd!!.setAdSplashListener(getGMSplashListener(adListener))
         //step3:创建开屏广告请求参数AdSlot,具体参数含义参考文档
         val adSlot = GMAdSlotSplash.Builder()
                 .setImageAdSize(1080, 1920) // 既适用于原生类型，也适用于模版类型。
@@ -30,7 +32,7 @@ class GMSplashAd {
         //ks兜底
 //        val ttNetworkRequestInfo = KsNetworkRequestInfo(AdManager.KS_AD_APP_ID, AdManager.SPLASH_GROMORE_KS_AD_ID);
         //step4:请求广告，调用开屏广告异步请求接口，对请求回调的广告作渲染处理
-        mTTSplashAd.loadAd(adSlot,ttNetworkRequestInfo,object: GMSplashAdLoadCallback {
+        mTTSplashAd!!.loadAd(adSlot,ttNetworkRequestInfo, object: GMSplashAdLoadCallback {
             override fun onSplashAdLoadFail(p0: com.bytedance.msdk.api.AdError) {
                 Log.e("huajie", "gromore tt splash error: " + p0!!.message)
                 adListener!!.adError(p0!!.message)
@@ -38,7 +40,7 @@ class GMSplashAd {
             override fun onSplashAdLoadSuccess() {
                 Log.e("huajie", "gromore tt splash onSplashAdLoadSuccess")
                 if (mTTSplashAd != null) {
-                    mTTSplashAd.showAd(adContainer)
+                    mTTSplashAd!!.showAd(adContainer)
                     if (mTTSplashAd != null && adContainer != null && adContainer!!.childCount > 0) {
                         val mSplashMinWindowManager = GroMoreSplashMinWindowManager.getInstance(activity)
                         mSplashMinWindowManager.setSplashInfo(mTTSplashAd, adContainer!!.getChildAt(0), activity!!.window.decorView)
@@ -49,7 +51,6 @@ class GMSplashAd {
                 adListener!!.adClose()
             }
         })
-        return mTTSplashAd
     }
 
     private fun getGMSplashListener(adListener: AdListener): GMSplashAdListener{
@@ -76,4 +77,9 @@ class GMSplashAd {
         }
     }
 
+    fun releaseAd(){
+        if(mTTSplashAd!=null){
+            mTTSplashAd!!.destroy()
+        }
+    }
 }

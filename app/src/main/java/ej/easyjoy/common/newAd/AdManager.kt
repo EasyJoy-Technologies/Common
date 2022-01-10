@@ -130,11 +130,11 @@ class AdManager {
         defaultAppId: String,
         defaultId: String,
         adListener: AdListener
-    ) {
+    ): GMSplashAd?{
         var gmSplashAd = GMSplashAd()
         if (!showAdForAuditing(activity)) {
             adListener.adError("")
-            return
+            return null
         }
         gmSplashAd.showSplashAd(
             activity,
@@ -144,6 +144,7 @@ class AdManager {
             defaultId,
             adListener
         )
+        return gmSplashAd
     }
 
     fun showGMBannerAd(

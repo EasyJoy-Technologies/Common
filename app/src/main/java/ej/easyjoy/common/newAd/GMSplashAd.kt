@@ -13,7 +13,7 @@ import com.bytedance.sdk.openadsdk.TTAdConstant
 
 class GMSplashAd {
 
-    fun showSplashAd(activity: Activity, adContainer: ViewGroup, gromoreId: String,defaultAppId: String, defaultId: String,adListener: AdListener){
+    fun showSplashAd(activity: Activity, adContainer: ViewGroup, gromoreId: String,defaultAppId: String, defaultId: String,adListener: AdListener): GMSplashAd {
         var mTTSplashAd = GMSplashAd(activity, gromoreId)
         mTTSplashAd.setAdSplashListener(getGMSplashListener(adListener))
         //step3:创建开屏广告请求参数AdSlot,具体参数含义参考文档
@@ -49,6 +49,7 @@ class GMSplashAd {
                 adListener!!.adClose()
             }
         })
+        return mTTSplashAd
     }
 
     private fun getGMSplashListener(adListener: AdListener): GMSplashAdListener{

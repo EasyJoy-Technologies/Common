@@ -53,6 +53,9 @@ class AdManager {
     }
 
     fun initGMAdSdk(context: Context, appId: String) {
+        if(!showAdForAuditing(context)){
+            return
+        }
         GMMediationAdSdk.initialize(
             context, GMAdConfig.Builder()
                 .setAppId(appId)
@@ -82,6 +85,9 @@ class AdManager {
     }
 
     fun initTTAdSdk(context: Context, appId: String) {
+        if(!showAdForAuditing(context)){
+            return
+        }
         TTAdSdk.init(context, TTAdConfig.Builder()
             .appId(appId)
             .useTextureView(false) //使用TextureView控件播放视频,默认为SurfaceView,当有SurfaceView冲突的场景，可以使用TextureView
@@ -101,6 +107,9 @@ class AdManager {
     }
 
     fun initQQAdSdk(context: Context, appId: String) {
+        if(!showAdForAuditing(context)){
+            return
+        }
         GDTAdSdk.init(context, appId)
     }
 

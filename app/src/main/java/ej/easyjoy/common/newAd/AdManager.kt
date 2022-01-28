@@ -2,6 +2,7 @@ package ej.easyjoy.common.newAd
 
 import android.app.Activity
 import android.content.Context
+import android.text.TextUtils
 import android.view.ViewGroup
 import com.bytedance.msdk.api.v2.*
 import com.bytedance.sdk.openadsdk.TTAdConfig
@@ -10,6 +11,7 @@ import com.bytedance.sdk.openadsdk.TTAdSdk
 import com.qq.e.comm.managers.GDTAdSdk
 import ej.easyjoy.common.R
 import java.text.SimpleDateFormat
+import java.util.*
 
 
 class AdManager {
@@ -37,10 +39,13 @@ class AdManager {
     private val simpleDateFormat = SimpleDateFormat("yyyy-MM-dd")
 
     var isShowAd: Boolean = false
-
+    var showDate: String? = null
     fun showAdForAuditing(context: Context): Boolean {
         if(isShowAd){
             return true
+        }
+        if(!TextUtils.isEmpty(showDate)){
+            return showDate!!>=simpleDateFormat.format(Date())
         }
         val sp = context.getSharedPreferences("data", Context.MODE_MULTI_PROCESS)
         if (sp.getLong("first_ad_time", 0L) == 0L) {
